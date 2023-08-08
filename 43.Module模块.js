@@ -25,3 +25,6 @@ export default function () {
 import customName from 'xxx.js';   // 注意，这时文件名不需要加大括号
 customName();  // foo
 // 上面代码的Import命令，可以用任意名称指向指定默认输出的模块，这时候就不需要知道原模块输出的函数名。
+
+// 
+
