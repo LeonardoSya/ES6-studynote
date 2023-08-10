@@ -56,7 +56,7 @@ class IncreasingCounter {
 
 // 类的实例
 // 实例的属性除非显式定义在其本身(即定义在this对象上)，否则都是定义在原型上(即定义在class上)
-class Point {
+class Points {
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -65,7 +65,7 @@ class Point {
         return this.x + this.y;
     }
 }
-var point = new Point(1, 2);
+var point = new Points(1, 2);
 point.toString()  // 3
 point.hasOwnProperty('x')   // true
 point.hasOwnProperty('toString')     //  false
@@ -162,27 +162,27 @@ printName()   // hello zyy
 
 // 静态方法
 // 类相当于实例的原型，在所有类中定义的方法，都会被实例继承。如果在一个方法前加上 static 关键字，就表示该方法【不会被实例继承】，而是【直接通过类来调用】，这是静态方法
-class Foo {
+class Foos {
     static classMethod() {
         console.log(this);  // [class Foo]
         return 'hello';
     }
 }
-var foo = new Foo();
+var foo = new Foos();
 foo.classMethod()   //  TypeError: foo.classMethod is not a function
 // 注意，如果静态方法包含this关键字，这个this指向的是类，而不是实例
 // 另外，同一个类中静态方法可以和非静态方法重名
 
 // 静态属性
 // 静态属性是Class本身的属性，即 Class.propName，而不是定义在实例对象上的属性
-class Foo {
+class Fooo {
     static prop = 1;
 }
 
 
 // 私有方法和私有属性
 // 私有方法和私有属性，是只能在类内部访问的方法和属性，外部不能访问，这样有利于代码的封装
-class MyClass {
+class MyClas {
     #count = 0;   // 只能在类的内部使用 (this.#count) 
     #sum() {
         return this.#count;
@@ -193,7 +193,7 @@ class MyClass {
 }
 // const counter = new MyClass()
 // counter.#count  // 报错
-const counter = new MyClass()
+const counter = new MyClas()
 counter.printSum()
 // 另外，私有属性和私有方法前，也可以加上static关键字，表示这是一个静态的私有属性活私有方法
 

@@ -32,7 +32,7 @@ s.includes('hello', 6)  // false
 
 //  6. trimStart() 消除字符串头部的空格, trimEnd() 消除字符串尾部的空格  返回新字符串,不会修改原始字符串
 const str = '   abc   ';
-s.trim()  //  'abc'
+str.trim()  //  'abc'
 s.trimStart()  // 'abc    '
 
 
